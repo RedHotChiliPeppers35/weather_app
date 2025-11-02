@@ -6,10 +6,6 @@ import 'app.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await dotenv.load(
-    fileName: "/Users/ataberkcinetci/Downloads/weather_app-main/.env",
-  );
-  print("✅ OPENWEATHER_KEY = ${dotenv.env['OPENWEATHER_KEY']}");
-
+  await dotenv.load(fileName: ".env");
   runApp(const ProviderScope(child: MyApp()));
 }
